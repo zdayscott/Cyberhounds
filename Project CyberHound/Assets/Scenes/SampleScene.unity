@@ -1702,6 +1702,12 @@ Transform:
   m_Father: {fileID: 1725623693}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &935006949 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1528293079045787411, guid: c6fa7b9262a171f45923814fbd38c38b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1046782694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1046782694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1721,9 +1727,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
         type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 1597263487}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: fireRate
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: recoil.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: recoil.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
       propertyPath: firePower
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: fireAction
+      value: 
+      objectReference: {fileID: 8213174521781077583, guid: 1c12ad67136da074e8508fca0d5dad34,
+        type: 3}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1092804044}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: fireAction.m_Id
+      value: 172ccb09-9d31-4b55-8399-e1653beb58fa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: fireAction.m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: fireActionReference
+      value: 
+      objectReference: {fileID: 8213174521781077583, guid: 1c12ad67136da074e8508fca0d5dad34,
+        type: 3}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1597263487}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1597263488}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1597263490}
+    - target: {fileID: 2654877578387974923, guid: c6fa7b9262a171f45923814fbd38c38b,
+        type: 3}
+      propertyPath: weapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1597263489}
     - target: {fileID: 2654877578387974966, guid: c6fa7b9262a171f45923814fbd38c38b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1833,6 +1911,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1046782694}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1092804044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2654877578387974922, guid: c6fa7b9262a171f45923814fbd38c38b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1046782694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597263481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095260471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2300,90 @@ Transform:
   m_Father: {fileID: 1725623693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1597263481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2654877578387974920, guid: c6fa7b9262a171f45923814fbd38c38b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1046782694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1597263487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597263481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e21f99f3bcc40e8be5f84aa98065bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+    type: 3}
+  firePoint: {fileID: 935006949}
+  fireRate: 30
+  firePower: 500
+  recoil: {x: 0.2, y: 0.2}
+  timeToMaxRecoil: 1
+--- !u!114 &1597263488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597263481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c197c0e11e4856aa3112a1d330dda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+    type: 3}
+  firePoint: {fileID: 935006949}
+  fireRate: 30
+  firePower: 500
+  recoil: {x: 0.2, y: 0.2}
+  timeToMaxRecoil: 1
+  shotsPerBurst: 12
+--- !u!114 &1597263489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597263481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa97147bf4c342d69c58f868ce656123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+    type: 3}
+  firePoint: {fileID: 935006949}
+  fireRate: 30
+  firePower: 500
+  recoil: {x: 0.2, y: 0.2}
+  timeToMaxRecoil: 1
+  shotsPerBurst: 3
+--- !u!114 &1597263490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597263481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c4dfdcbf2e462b88bf0216795d71dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+    type: 3}
+  firePoint: {fileID: 935006949}
+  fireRate: 30
+  firePower: 500
+  recoil: {x: 0.2, y: 0.2}
+  timeToMaxRecoil: 1
 --- !u!1 &1684918006
 GameObject:
   m_ObjectHideFlags: 0

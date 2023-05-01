@@ -2,6 +2,7 @@
 using Project;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DamageTaker : MonoBehaviour
 {
@@ -10,22 +11,26 @@ public class DamageTaker : MonoBehaviour
 
     private bool _isDead;
 
-    public event Action OnDie;
+    public UnityEvent OnHit;
+    public UnityEvent OnDie;
+
+    private void Start()
+    {
+        _currentHealth = maxHeath;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         Collide(collision.collider);
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Collide(other);
-    }
+    }*/
 
     private void Collide(Collider other)
     {
-        Debug.Log($"Trigger enter! {other.gameObject.name}");
-
         if (_isDead) return;
 
         if (other.TryGetComponent(out Projectile projectile))
@@ -34,6 +39,8 @@ public class DamageTaker : MonoBehaviour
             _currentHealth = math.clamp(_currentHealth, 0, maxHeath);
 
             projectile.OnCollide(this);
+            
+            OnHit?.Invoke();
 
             if (_currentHealth == 0)
             {

@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private Transform bodyTransform;
 
-    [Header("Projectile Logic")] 
-    [SerializeField] private GameObject projectile;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private float firePower = 500f;
+    public int weaponIndex;
+    public Weapon[] weapons;
 
-    
+    [Header("Action References")]
+    [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private InputActionReference fireActionReference;
+    private InputAction _fireAction;
 
     private Rigidbody rb;
     private Vector2 m_Move;
@@ -22,6 +24,12 @@ public class CharacterController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+        Debug.Log($"Name: {fireActionReference.action.name}");
+        _playerInput = GetComponent<PlayerInput>();
+        _fireAction = _playerInput.actions[fireActionReference.action.name];
+        _fireAction.started += FireActionOnStarted;
+        _fireAction.canceled += FireActionOnCanceled;
     }
 
     private void FixedUpdate()
@@ -60,13 +68,23 @@ public class CharacterController : MonoBehaviour
         m_Look = value.Get<Vector2>();
     }
 
-    public void OnFire(InputValue value)
+    public void OnCycleWeapon(InputValue value)
     {
-        var go = Instantiate(projectile, firePoint);
-
-        if (go.TryGetComponent(out Rigidbody pRigidbody))
-        {
-            pRigidbody.AddForce(firePoint.forward * firePower, ForceMode.VelocityChange);
-        }
+        weapons[weaponIndex].StopFiring();
+        weaponIndex++;
+        if (weaponIndex >= weapons.Length)
+            weaponIndex = 0;
     }
+    
+    private void FireActionOnStarted(InputAction.CallbackContext obj)
+    {
+        weapons[weaponIndex].StartFiring();
+    }
+    
+    private void FireActionOnCanceled(InputAction.CallbackContext obj)
+    {
+        weapons[weaponIndex].StopFiring();
+    }
+    
+
 }
