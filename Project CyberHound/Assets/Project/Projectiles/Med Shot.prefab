@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1845385098844901882}
   - component: {fileID: 3714595491434640487}
   m_Layer: 6
-  m_Name: Shot
+  m_Name: Med Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f11a9e4f49d8b247925109ece81a95b, type: 2}
+  - {fileID: 2100000, guid: 29168f7821c56974f8e4791c9a15f816, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -236,4 +236,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97011db0e61c4b4eb49448a0e6ff27ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3

@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e21f99f3bcc40e8be5f84aa98065bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+  projectile: {fileID: 3714595491434640487, guid: 25169a84a965ed248a0af200132ff7a6,
     type: 3}
   firePoint: {fileID: 935006949}
   fireRate: 30
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c197c0e11e4856aa3112a1d330dda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+  projectile: {fileID: 3714595491434640487, guid: 25169a84a965ed248a0af200132ff7a6,
     type: 3}
   firePoint: {fileID: 935006949}
   fireRate: 30
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa97147bf4c342d69c58f868ce656123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+  projectile: {fileID: 3714595491434640487, guid: d661eebb9797cd44586490609c0f04a9,
     type: 3}
   firePoint: {fileID: 935006949}
   fireRate: 30
@@ -2377,11 +2377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c4dfdcbf2e462b88bf0216795d71dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5873983415200940685, guid: 25169a84a965ed248a0af200132ff7a6,
+  projectile: {fileID: 7207191913008891996, guid: 8a581c8e9f1a6844fbcfb942a1a43798,
     type: 3}
   firePoint: {fileID: 935006949}
   fireRate: 30
-  firePower: 500
+  firePower: 100
   recoil: {x: 0.2, y: 0.2}
   timeToMaxRecoil: 1
 --- !u!1 &1684918006

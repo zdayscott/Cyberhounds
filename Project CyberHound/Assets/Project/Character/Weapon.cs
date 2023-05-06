@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Project;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Weapon : MonoBehaviour
 {
     [Header("Projectile Logic")] 
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private Projectile projectile;
     [SerializeField] private Transform firePoint;
     [SerializeField] protected float fireRate = 30;
     [SerializeField] private float firePower = 500f;
@@ -16,7 +19,9 @@ public class Weapon : MonoBehaviour
     protected Coroutine _firingCoroutine;
     protected bool isFiring;
     protected float timeFiring = 0f;
-    
+
+    private List<ExplosiveProjectile> activeProjectiles = new List<ExplosiveProjectile>();
+
     private void Update()
     {
         if (!isFiring && timeFiring > 0)
@@ -36,6 +41,9 @@ public class Weapon : MonoBehaviour
             var randomVariance = new Vector2(Random.Range(-1 * horizontal, horizontal),Random.Range(-1 * vertical, vertical));
             pRigidbody.AddForce((firePoint.forward + firePoint.right * randomVariance.x + firePoint.up * randomVariance.y) * firePower, ForceMode.VelocityChange);
         }
+        
+        if(go is ExplosiveProjectile explosiveProjectile)
+            activeProjectiles.Add(explosiveProjectile);
     }
     
     protected virtual IEnumerator FireWeapon()
@@ -62,5 +70,16 @@ public class Weapon : MonoBehaviour
     public void StopFiring()
     {
         isFiring = false;
+
+        if (activeProjectiles.Any())
+        {
+            foreach (var activeProjectile in activeProjectiles)
+            {
+                if(activeProjectile != null)
+                    activeProjectile.Explode();
+            }
+        }
+        
+        activeProjectiles.Clear();
     }
 }

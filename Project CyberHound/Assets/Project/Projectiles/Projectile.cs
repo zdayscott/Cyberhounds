@@ -7,9 +7,13 @@ namespace Project
     {
         public int damage;
 
-        public void OnCollide(DamageTaker damageTaker)
+        public virtual void OnCollide(DamageTaker damageTaker)
         {
             if (damageTaker is EnemyHealth health)
+            {
+                Destroy(gameObject);
+            }
+            else
             {
                 Destroy(gameObject);
             }
