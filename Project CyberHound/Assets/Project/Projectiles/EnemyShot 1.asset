@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524966d502c2e59479c6c6fd233d8972, type: 3}
+  m_Name: EnemyShot 1
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3714595491434640487, guid: 29c08a0a40f70f64ba3a343d3e948619,
+    type: 3}
+  firePower: 100
+  fireRate: 1

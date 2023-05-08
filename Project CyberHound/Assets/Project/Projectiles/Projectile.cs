@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Project.Game_Entities.Enemies;
 using UnityEngine;
 
-namespace Project
+namespace Project.Projectiles
 {
     public class Projectile : MonoBehaviour
     {

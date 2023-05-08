@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Project;
+using Project.Projectiles;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

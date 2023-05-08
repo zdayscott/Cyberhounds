@@ -1,3 +1,4 @@
+using Project.Game_Entities.Enemies;
 using UnityEngine;
 using UnityEngine.UI;
 

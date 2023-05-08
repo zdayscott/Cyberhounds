@@ -8,7 +8,7 @@ public class ShotgunWeapon : Weapon
     protected override IEnumerator FireWeapon()
     {
         timeFiring = timeToMaxRecoil;
-        for (var i = 0; i < 12; i++)
+        for (var i = 0; i < shotsPerBurst; i++)
         {
             FireShot();
         }
